@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
+
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Esry — RSncioco </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+  <a class="brand" href="#">
+    <svg width="40" height="40" viewBox="0 0 48 48" aria-
+hidden="true">
+ <defs>
+  <linearGradient id="lg" x1="0" x2="1">
+   <stop offset="0" stop-color="#7df9ff"/>
+   <stop offset="1" stop-color="#c86fff"/>
+   </linearGradient>
+  </defs> <rect rx="8" width="48" height="48" fill="url(#lg)">
+  </rect>
+ <text x="50%" y="56%" text-anchor="middle" font-size="20" 
+font-family="Inter" font-weight="800" fill="#04060a">E</text>
+ </svg>
+
+    <!-- your SVG and brand -->
+    <svg width="1" height="40" viewBox="0 0 48 48" aria-hidden="true"> ... </svg>
+    <span class="brand-text">Esry</span>
+  </a>
+
+  <!-- Hamburger Button -->
+  <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Navigation Links -->
+  <nav id="nav-links" class="nav-links">
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact" class="cta">Contact</a>
+  </nav>
+</div>
+
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="kicker">Personal portfolio</div>
+          <h1 class="hero-title">
+            Esry
+            <span class="title-neon"> — Turning “what ifs” into “heck yeah.”</span>
+          </h1>
+          <p class="hero-sub">I believe every idea has the potential to spark something amazing. With creativity, a bit of humor, and plenty of passion, I turn small sparks into bold projects that make people smile.</p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#portfolio">See Work</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+
+          <div class="stats">
+            <div><strong>35%</strong><span>Building new ideas</span></div>
+            <div><strong>Adaptive</strong><span>Learns from feedback</span></div>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="false">
+          <svg class="diagram" viewBox="0 0 900 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <radialGradient id="gA" cx="20%" cy="20%">
+                <stop offset="0" stop-color="#7df9ff" stop-opacity="0.9"/>
+                <stop offset="1" stop-color="#7df9ff" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="gB" cx="80%" cy="10%">
+                <stop offset="0" stop-color="#c86fff" stop-opacity="0.95"/>
+                <stop offset="1" stop-color="#c86fff" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="link" x1="0" x2="1">
+                <stop offset="0" stop-color="#7df9ff"/>
+                <stop offset="1" stop-color="#c86fff"/>
+              </linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="10" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <circle cx="120" cy="80" r="120" fill="url(#gA)" opacity="0.18"></circle>
+            <circle cx="760" cy="60" r="100" fill="url(#gB)" opacity="0.16"></circle>
+
+            <path class="link-path" d="M120 220 C220 160, 360 120, 450 200 C540 280, 660 300, 760 240" stroke="url(#link)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"></path>
+
+            <g class="node" transform="translate(120,220)">
+              <circle r="18" fill="#07123a" stroke="#7df9ff" stroke-width="4" filter="url(#glow)"></circle>
+            </g>
+            <g class="node" transform="translate(450,200)">
+              <circle r="22" fill="#07123a" stroke="#c86fff" stroke-width="5" filter="url(#glow)"></circle>
+            </g>
+            <g class="node" transform="translate(760,240)">
+              <circle r="16" fill="#07123a" stroke="#7df9ff" stroke-width="3" filter="url(#glow)"></circle>
+            </g>
+          </svg>
+
+          <div class="mini-photo">
+            <img src="./images/Rey.jpg" alt="Esry portrait 2" />
+            <div class="mini-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="panel">
+      <div class="container">
+        <h3 class="panel-kicker">About</h3>
+        <h2 class="panel-title">A short story that reveals itself</h2>
+
+        <div class="story">
+          <p class="story-step">I start with a question — “What if?” Then I chase it with enthusiasm.</p>
+          <p class="story-step">I build small experiments, prototype quickly, and test the idea in the real world.</p>
+          <p class="story-step">If it sparks joy, I iterate. If not, I learn and pivot — always smiling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="panel">
+      <div class="container">
+        <h3 class="panel-kicker">Portfolio</h3>
+        <h2 class="panel-title">Selected experiments & prototypes</h2>
+
+        <div class="cards">
+          <article class="card">
+            
+            <div class="card-media">
+  <video autoplay muted loop playsinline>
+    <source src="medim.mp4" type="video/mp4"></video></div>
+
+            <div class="card-body">
+              <h4>Realtime Clarifier</h4>
+              <p>Inline suggestions that reduce message ambiguity — demo placeholder.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+  <video autoplay muted loop playsinline>
+    <source src="small.mp4" type="video/mp4"></video></div>
+            <div class="card-body">
+              <h4>Adaptive UI</h4>
+              <p>Interfaces that tune verbosity and tone to user history.</p>
+            </div>
+          </article>
+
+          <article class="card">
+           <div class="card-media">
+  <video autoplay muted loop playsinline>
+    <source src="secl.mp4" type="video/mp4"></video></div>
+            <div class="card-body">
+              <h4>Memory Vault</h4>
+              <p>Privacy-first recall system for past conversations and context.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel contact-panel">
+      <div class="container">
+        <h3 class="panel-kicker">Contact</h3>
+        <h2 class="panel-title">Let’s build something that listens</h2>
+
+        <div class="contact-grid">
+          <form class="contact-form" id="contactForm">
+            <label><input name="name" placeholder="Your name" required></label>
+            <label><input name="email" type="email" placeholder="you@domain.com" required></label>
+            <label><textarea name="message" placeholder="Tell me about the project…" required></textarea></label>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send request</button>
+              <a href="mailto:reyjohnsancioco@gmail.com" target="_blank" class="btn">Email me</a>
+              <p><strong>reyjohnsancioco@gmail.com</strong></p>
+
+            </div>
+          </form>
+
+          <aside class="contact-aside">
+            <div class="profile-mini">
+              <img src="./images/ry.jpg" alt="Esry">
+              <div>
+                <h4>Rey John D. Sancioco</h4>
+                <div class="muted">Esry — creative builder</div>
+              </div>
+            </div>
+
+            <div class="socials">
+              <a href="https://www.instagram.com/colores_narey" target="_blank">Instagram</a>
+              <a href="https://www.facebook.com/share/1ZrWtQvsGz/" target="_blank">Facebook</a>
+              <a href="https://www.tiktok.com/@veynsd" target="_blank">TikTok</a>
+            </div>
+
+            <small class="muted">Built with neon love · Theme: blue ↔ violet ↔ pink</small>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <strong>Esry</strong> • Crafted with neon & care
+  </footer>
+ <script src="script.js" defer></script> 
+ <script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // ✅ CONTACT FORM FIX
+   document.getElementById("contactForm").addEventListener("submit", function(e){
+       e.preventDefault(); // stop page reload
+
+       const success = document.createElement("div");
+       success.innerText = "⚡ Message sent successfully!";
+       success.style.marginTop = "15px";
+       success.style.padding = "12px";
+       success.style.borderRadius = "12px";
+       success.style.textAlign = "center";
+       success.style.background = "linear-gradient(90deg,#00f5ff,#c86fff)";
+       success.style.color = "#05030a";
+       success.style.fontWeight = "600";
+       success.style.boxShadow = "0 0 20px rgba(200,111,255,0.6)";
+
+       this.appendChild(success);
+
+       setTimeout(() => {
+           success.remove();
+       }, 3000);
+
+       this.reset();
+   });
+ </script>
+ </body>
+</html>
